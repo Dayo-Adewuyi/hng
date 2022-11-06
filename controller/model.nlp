@@ -1,0 +1,1002 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "addit": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "add": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "add,can,you": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "add,number,this,two": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "2,5,and,plus": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "addit,next,number,of,the": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "add,below,number,the": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "a,do,number,of,sum,the": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "be,sum,the,what,will": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "add,be,the,what,will": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "follow,of,sum,the": {
+            "intent": "operation.add",
+            "domain": "default"
+          },
+          "subtract": {
+            "intent": "opearation.sub",
+            "domain": "default"
+          },
+          "sub": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "from,one,other,subtract,the": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "from,minus,number,one,other,the": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "below,number,subtract,the": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "a,do,number,of,subtract,the": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "be,subtract,the,what,will": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "be,sub,the,what,will": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "follow,of,subtract,the": {
+            "intent": "operation.sub",
+            "domain": "default"
+          },
+          "multipli": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "below,multipli,number,the": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "a,do,multipl,number,of,the": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "be,multipl,the,what,will": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "be,mul,the,what,will": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "follow,multipl,of,the": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "can,the,time,you": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "follow,the,time": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "number,of,the,time": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "and,time,x,y": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "and,of,product,x,y": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "is,product,the,waht": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "is,of,product,the,what": {
+            "intent": "operation.mul",
+            "domain": "default"
+          },
+          "of,product,the": {
+            "intent": "operation.mul",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "operation.add": "default",
+          "opearation.sub": "default",
+          "operation.sub": "default",
+          "operation.mul": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "addition",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "add",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "can you add",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "add this two numbers",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "plus 5 and 2",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "addition of the next numbers",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "add the below numbers",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "do a sum of the numbers",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the sum",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the add",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "sum of the following",
+            "intent": "operation.add"
+          },
+          {
+            "domain": "default",
+            "utterance": "subtract",
+            "intent": "opearation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "sub",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "subtract one from the other",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "minus one number from the other",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "subtract the below numbers",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "do a subtraction of the numbers",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the subtraction",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the sub",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "subtraction of the following",
+            "intent": "operation.sub"
+          },
+          {
+            "domain": "default",
+            "utterance": "multiply",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "multiply the below numbers",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "do a multiplication of the numbers",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the multiplication",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "what will be the mul",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "multiplication of the following",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "can the you times",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "times the following",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "times of the numbers",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "times x and y",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "product of x and y",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "waht is the product",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is the product of",
+            "intent": "operation.mul"
+          },
+          {
+            "domain": "default",
+            "utterance": "the product of ",
+            "intent": "operation.mul"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "2": 1,
+              "5": 1,
+              "addit": 1,
+              "add": 1,
+              "can": 1,
+              "you": 1,
+              "this": 1,
+              "two": 1,
+              "number": 1,
+              "plus": 1,
+              "and": 1,
+              "of": 1,
+              "the": 1,
+              "next": 1,
+              "below": 1,
+              "do": 1,
+              "a": 1,
+              "sum": 1,
+              "what": 1,
+              "will": 1,
+              "be": 1,
+              "follow": 1,
+              "subtract": 1,
+              "sub": 1,
+              "one": 1,
+              "from": 1,
+              "other": 1,
+              "minus": 1,
+              "multipli": 1,
+              "multipl": 1,
+              "mul": 1,
+              "time": 1,
+              "x": 1,
+              "y": 1,
+              "product": 1,
+              "waht": 1,
+              "is": 1
+            },
+            "intents": {
+              "operation.add": 1,
+              "opearation.sub": 1,
+              "operation.sub": 1,
+              "operation.mul": 1
+            },
+            "intentFeatures": {
+              "operation.add": {
+                "2": 1,
+                "5": 1,
+                "addit": 1,
+                "add": 1,
+                "can": 1,
+                "you": 1,
+                "this": 1,
+                "two": 1,
+                "number": 1,
+                "plus": 1,
+                "and": 1,
+                "of": 1,
+                "the": 1,
+                "next": 1,
+                "below": 1,
+                "do": 1,
+                "a": 1,
+                "sum": 1,
+                "what": 1,
+                "will": 1,
+                "be": 1,
+                "follow": 1
+              },
+              "opearation.sub": {
+                "subtract": 1
+              },
+              "operation.sub": {
+                "sub": 1,
+                "subtract": 1,
+                "one": 1,
+                "from": 1,
+                "the": 1,
+                "other": 1,
+                "minus": 1,
+                "number": 1,
+                "below": 1,
+                "do": 1,
+                "a": 1,
+                "of": 1,
+                "what": 1,
+                "will": 1,
+                "be": 1,
+                "follow": 1
+              },
+              "operation.mul": {
+                "multipli": 1,
+                "the": 1,
+                "below": 1,
+                "number": 1,
+                "do": 1,
+                "a": 1,
+                "multipl": 1,
+                "of": 1,
+                "what": 1,
+                "will": 1,
+                "be": 1,
+                "mul": 1,
+                "follow": 1,
+                "can": 1,
+                "you": 1,
+                "time": 1,
+                "x": 1,
+                "and": 1,
+                "y": 1,
+                "product": 1,
+                "waht": 1,
+                "is": 1
+              }
+            },
+            "featuresToIntent": {
+              "2": [
+                "operation.add"
+              ],
+              "5": [
+                "operation.add"
+              ],
+              "addit": [
+                "operation.add"
+              ],
+              "add": [
+                "operation.add"
+              ],
+              "can": [
+                "operation.add",
+                "operation.mul"
+              ],
+              "you": [
+                "operation.add",
+                "operation.mul"
+              ],
+              "this": [
+                "operation.add"
+              ],
+              "two": [
+                "operation.add"
+              ],
+              "number": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "plus": [
+                "operation.add"
+              ],
+              "and": [
+                "operation.add",
+                "operation.mul"
+              ],
+              "of": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "the": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "next": [
+                "operation.add"
+              ],
+              "below": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "do": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "a": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "sum": [
+                "operation.add"
+              ],
+              "what": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "will": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "be": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "follow": [
+                "operation.add",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "subtract": [
+                "opearation.sub",
+                "operation.sub"
+              ],
+              "sub": [
+                "operation.sub"
+              ],
+              "one": [
+                "operation.sub"
+              ],
+              "from": [
+                "operation.sub"
+              ],
+              "other": [
+                "operation.sub"
+              ],
+              "minus": [
+                "operation.sub"
+              ],
+              "multipli": [
+                "operation.mul"
+              ],
+              "multipl": [
+                "operation.mul"
+              ],
+              "mul": [
+                "operation.mul"
+              ],
+              "time": [
+                "operation.mul"
+              ],
+              "x": [
+                "operation.mul"
+              ],
+              "y": [
+                "operation.mul"
+              ],
+              "product": [
+                "operation.mul"
+              ],
+              "waht": [
+                "operation.mul"
+              ],
+              "is": [
+                "operation.mul"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "addit",
+                "add",
+                "can",
+                "you",
+                "this",
+                "two",
+                "number",
+                "2",
+                "5",
+                "plus",
+                "and",
+                "of",
+                "the",
+                "next",
+                "below",
+                "do",
+                "a",
+                "sum",
+                "what",
+                "will",
+                "be",
+                "follow",
+                "subtract",
+                "sub",
+                "one",
+                "from",
+                "other",
+                "minus",
+                "multipli",
+                "multipl",
+                "mul",
+                "time",
+                "x",
+                "y",
+                "product",
+                "waht",
+                "is"
+              ],
+              "intents": [
+                "operation.add",
+                "opearation.sub",
+                "operation.sub",
+                "operation.mul"
+              ],
+              "perceptrons": [
+                [
+                  10.410839080810547,
+                  10.708453178405762,
+                  -0.10140250623226166,
+                  -0.10140250623226166,
+                  -0.1678721010684967,
+                  -0.1678721010684967,
+                  0.13085885345935822,
+                  3.0857884883880615,
+                  3.0857884883880615,
+                  3.0857884883880615,
+                  1.2505369186401367,
+                  -0.3826587498188019,
+                  -1.2142999172210693,
+                  1.622091293334961,
+                  0.8823426961898804,
+                  0.5149403810501099,
+                  0.5149403810501099,
+                  10.940668106079102,
+                  -0.01486840657889843,
+                  0.4594641625881195,
+                  0.4594641625881195,
+                  1.1158820390701294,
+                  -5.284633636474609,
+                  -3.8388171195983887,
+                  -1.6149793863296509,
+                  -1.6149793863296509,
+                  -1.6149793863296509,
+                  -0.9722865223884583,
+                  -3.835857629776001,
+                  -3.8035600185394287,
+                  -3.4417638778686523,
+                  -3.650559425354004,
+                  -1.7721439599990845,
+                  -1.7721439599990845,
+                  -2.467590093612671,
+                  -0.00624080840498209,
+                  -0.4659256041049957,
+                  3.774626768771147
+                ],
+                [
+                  -1.9068803787231445,
+                  -1.9057632684707642,
+                  -0.23977583646774292,
+                  -0.23977583646774292,
+                  -0.003507492830976844,
+                  -0.003507492830976844,
+                  -2.8480958938598633,
+                  -0.38228297233581543,
+                  -0.38228297233581543,
+                  -0.38228297233581543,
+                  -0.7699776887893677,
+                  -2.8380510807037354,
+                  -8.858992576599121,
+                  0,
+                  -2.4788146018981934,
+                  -0.32912158966064453,
+                  -0.32912158966064453,
+                  0,
+                  -1.776865005493164,
+                  -1.776865005493164,
+                  -1.776865005493164,
+                  -2.4857850074768066,
+                  12.272562980651855,
+                  -1.9137141704559326,
+                  -1.7771108150482178,
+                  -1.7771108150482178,
+                  -1.7771108150482178,
+                  -0.012747620232403278,
+                  -1.9090639352798462,
+                  0,
+                  0,
+                  -0.373294472694397,
+                  -0.38758936524391174,
+                  -0.38758936524391174,
+                  -0.010560316033661366,
+                  0,
+                  0,
+                  1.9190948640477077
+                ],
+                [
+                  -2.446725368499756,
+                  -5.833383083343506,
+                  -0.5867381691932678,
+                  -0.5867381691932678,
+                  -0.2975439429283142,
+                  -0.2975439429283142,
+                  3.368048906326294,
+                  -0.19221287965774536,
+                  -0.19221287965774536,
+                  -0.19221287965774536,
+                  -0.22710561752319336,
+                  1.381640076637268,
+                  4.124602317810059,
+                  -2.2259228229522705,
+                  2.6401829719543457,
+                  0.7052446007728577,
+                  0.7052446007728577,
+                  -6.0147809982299805,
+                  0.5843590497970581,
+                  0.9819887280464172,
+                  0.9819887280464172,
+                  4.62113618850708,
+                  8.325767517089844,
+                  14.844523429870605,
+                  2.047241449356079,
+                  2.047241449356079,
+                  2.047241449356079,
+                  4.921144485473633,
+                  -5.899242401123047,
+                  -6.076534271240234,
+                  -3.682180643081665,
+                  -4.67392635345459,
+                  -0.017583737149834633,
+                  -0.017583737149834633,
+                  -1.5848690271377563,
+                  -0.48360514640808105,
+                  -0.920896589756012,
+                  -4.196099309473007
+                ],
+                [
+                  -3.6728415489196777,
+                  -6.601518630981445,
+                  -0.18867802619934082,
+                  -0.18867802619934082,
+                  -0.3531598448753357,
+                  -0.3531598448753357,
+                  -1.4942394495010376,
+                  -1.4087533950805664,
+                  -1.4087533950805664,
+                  -1.4087533950805664,
+                  -0.14887700974941254,
+                  1.07733952999115,
+                  2.7237627506256104,
+                  -2.8474984169006348,
+                  -1.1725072860717773,
+                  0.38853681087493896,
+                  0.38853681087493896,
+                  -7.21073579788208,
+                  -0.28791406750679016,
+                  0.2693672478199005,
+                  0.2693672478199005,
+                  -0.5559640526771545,
+                  -7.103700160980225,
+                  -6.591166973114014,
+                  -1.5117746591567993,
+                  -1.5117746591567993,
+                  -1.5117746591567993,
+                  -0.9089357256889343,
+                  10.590332984924316,
+                  7.531165599822998,
+                  7.679837703704834,
+                  8.288467407226562,
+                  1.3293275833129883,
+                  1.3293275833129883,
+                  6.8849005699157715,
+                  0.7887250781059265,
+                  0.23042847216129303,
+                  3.6641314469610253
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "addition"
+      ],
+      [
+        "en",
+        "add"
+      ],
+      [
+        "en",
+        "can you add"
+      ],
+      [
+        "en",
+        "add this two numbers"
+      ],
+      [
+        "en",
+        "plus 5 and 2"
+      ],
+      [
+        "en",
+        "addition of the next numbers"
+      ],
+      [
+        "en",
+        "add the below numbers"
+      ],
+      [
+        "en",
+        "do a sum of the numbers"
+      ],
+      [
+        "en",
+        "what will be the sum"
+      ],
+      [
+        "en",
+        "what will be the add"
+      ],
+      [
+        "en",
+        "sum of the following"
+      ],
+      [
+        "en",
+        "subtract"
+      ],
+      [
+        "en",
+        "sub"
+      ],
+      [
+        "en",
+        "subtract one from the other"
+      ],
+      [
+        "en",
+        "minus one number from the other"
+      ],
+      [
+        "en",
+        "subtract the below numbers"
+      ],
+      [
+        "en",
+        "do a subtraction of the numbers"
+      ],
+      [
+        "en",
+        "what will be the subtraction"
+      ],
+      [
+        "en",
+        "what will be the sub"
+      ],
+      [
+        "en",
+        "subtraction of the following"
+      ],
+      [
+        "en",
+        "multiply"
+      ],
+      [
+        "en",
+        "multiply the below numbers"
+      ],
+      [
+        "en",
+        "do a multiplication of the numbers"
+      ],
+      [
+        "en",
+        "what will be the multiplication"
+      ],
+      [
+        "en",
+        "what will be the mul"
+      ],
+      [
+        "en",
+        "multiplication of the following"
+      ],
+      [
+        "en",
+        "can the you times"
+      ],
+      [
+        "en",
+        "times the following"
+      ],
+      [
+        "en",
+        "times of the numbers"
+      ],
+      [
+        "en",
+        "times x and y"
+      ],
+      [
+        "en",
+        "product of x and y"
+      ],
+      [
+        "en",
+        "waht is the product"
+      ],
+      [
+        "en",
+        "what is the product of"
+      ],
+      [
+        "en",
+        "the product of "
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
