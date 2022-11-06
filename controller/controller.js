@@ -8,7 +8,7 @@ exports.info = catchAsyncErrors(async (req, res, next) => {
     res.status(200).json({
 
         success: true,
-        slackUsername: "dayo",
+        slackUsername: "wande.eth",
         backend: true,
         age: 25,
         bio: "A goal-oriented self starter looking to build the next unicorn"
@@ -48,7 +48,7 @@ exports.operation = catchAsyncErrors(async (req, res, next) => {
             return response.data.choices[0].text.slice(3);
         }
         getSolutionFromOpenai().then((val) => res.status(200).json({
-            slackUsername: 'akinolaaa',
+            slackUsername: 'wande.eth',
             operation_type: operation_type,
             result: Number(val)
         })).catch((err) => {
