@@ -58,8 +58,9 @@ exports.operation = catchAsyncErrors(async (req, res, next) => {
     } else {
         res.status(200).json({
             slackUsername: 'wande.eth',
-            operation_type: operation_type,
-            result: solution
+            result: solution,
+            operation_type: operation_type
+
         })
     }
 
