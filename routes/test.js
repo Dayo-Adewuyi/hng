@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 router.route('/info').get(info)
-router.route('/').post(operation)
+router.route('/math').post(operation)
 
 
 module.exports = router

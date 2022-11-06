@@ -73,9 +73,9 @@ app.all('*', (req, res, next) => {
 // Middleware to handle errors
 app.use(errorMiddleware);
 
-const PORT = process.env.PORT;
+const PORT = 7000
 const server = app.listen(PORT, () => {
-    console.log(`Server started on port ${process.env.PORT} in ${process.env.NODE_ENV} mode.`);
+    console.log(`Server started on port ${PORT} in ${process.env.NODE_ENV} mode.`);
 });
 
 // Handling Unhandled Promise Rejection

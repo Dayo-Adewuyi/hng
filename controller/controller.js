@@ -16,49 +16,52 @@ exports.info = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.operation = catchAsyncErrors(async (req, res, next) => {
-    const{operation_type, x, y} = req.body
+    const { operation_type, x, y } = req.body
 
-    let operation;
-    let result;
-
-    switch(operation_type){
-        case 1:
-            operation = "addition";
-            break;
-        case 2:
-            operation = "subtraction"
-            break;
-        case 3:
-            operation = "multiplication"
-            break;
+    switch (operation_type.toLowerCase()) {
+        case "addition":
+            solution = x + y; break;
+        case "multiplication":
+            solution = x * y; break;
+        case "subtraction":
+            solution = x - y; break;
         default:
-            operation = "addition"
-
+            solution = "special";
+            break;
     }
 
-    if(operation == "addition"){
-       result = x + y
-       return result
+    if (solution === "special") {
+        const getSolutionFromOpenai = async (callback) => {
+
+            const response = await openai.createCompletion({
+                model: "text-davinci-002",
+                prompt: "Q: Multiply 5 and 6\nA: 30\n\nQ: Add 3 to 10\nA: 13\n\nQ: what is 12 subtracted from 20?\nA: 7\n\nQ: What is 2 plus 2?\nA: 4\n\nQ: What is 2 multiplied by 8?\nA: 16\n\nQ: What is 34 minus 30?\nA: 4\n\nQ: Can you please add the following numbers together - 13 and 29?\nA: 42\n\nQ: " + operation_type + "\n",
+                temperature: 0,
+                max_tokens: 64,
+                top_p: 1,
+                frequency_penalty: 0,
+                presence_penalty: 0,
+                stop: ["\n\n"],
+            });
+
+            //
+            return response.data.choices[0].text.slice(3);
+        }
+        getSolutionFromOpenai().then((val) => res.status(200).json({
+            slackUsername: 'akinolaaa',
+            operation_type: operation_type,
+            result: Number(val)
+        })).catch((err) => {
+            res.status(200).json({ err })
+        });
+
+    } else {
+        res.status(200).json({
+            slackUsername: 'wande.eth',
+            operation_type: operation_type,
+            result: solution
+        })
     }
 
-    if(operation == "subtraction"){
-        result = x - y
-        return result
-    }
-    if(operation == "multiplication"){
-        result = x * y
 
-        return result
-    }
-
-    const finalResult = parseInt(result)
-    
-    res.status(200).json({
-
-        success: true,
-        slackUsername: "wande.eth",
-        result: finalResult,
-        operation_type: operation
-      
-    });
 });
